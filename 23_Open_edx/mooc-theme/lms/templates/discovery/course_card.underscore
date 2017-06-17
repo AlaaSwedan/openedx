@@ -1,0 +1,38 @@
+<div class="col-md-12  col-sm-6 col-xs-12 " role="region" aria-label="<%- content.display_name %>">
+    <div class="post-block mb30">
+        <a href="/courses/<%- course %>/about" class="imghover"></a>
+            <div class="post-img">
+                <img src="<%- image_url %>" alt="<%- content.display_name %> <%- content.number %>" class="img-responsive" style="height: 138px; width: 255px;">    
+            </div>
+        </a>
+        <div class="bg-white pinside40 outline" style="height: 109px;">
+            <h6 style="height: 35px;">
+              <a href="#" class="title" style="font-size: 14px;"><%- content.display_name %></a>
+              </h6>
+            <span class="meta-author">
+                <a href="#" style="font-size: 12px;"> <%- org %></a>
+                <p class="meta">
+                    <span class="meta-author"  style="font-size: 8px;">
+                       <%= gettext("num") %>
+
+                    </span>
+                    <span class="meta-date course-date" aria-hidden="true"> 
+                        <%- interpolate(
+                            gettext("Starts: %(start_date)s"),
+                            { start_date: start }, true
+                        ) %>
+                    </span>
+                </p>                            
+            </span>
+        </div>
+    </div>
+</div>
+
+
+
+    
+        
+       
+    
+        
+       

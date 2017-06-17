@@ -1,0 +1,190 @@
+
+/*---------------
+		 override  ----------------- */
+ .mooc-nav-1{
+	padding:0;
+}
+.header-global {
+    border-bottom: 0px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0);
+}
+.header-global .wrapper-header{
+	padding:0;
+}
+.mooc-nav-2{
+	padding:0px;
+
+}
+.test-container{
+	box-sizing: border-box;
+    margin: 0 auto 0;
+    /* padding: 40px 0; */
+    max-width: 1180px;
+    min-width: 760px;
+    width: 100%;
+}
+.btn-default{
+	background-color:#d13d19;
+}
+.find-courses .search-facets .facet-list.collapse{
+	display:block;
+}
+#main {
+	margin-top: 66px;
+}
+.header-global .user .dropdown-menu{
+	left:-100px;
+	right:-100px;
+}
+.admin-nav{
+	padding-top:36px;
+}
+
+#a-slider{
+	color:#fff;
+}
+#a-slider:hover{
+	text-decoration:none;
+	background-color: #8c2911;
+	border-color: #8c2911;
+}
+#btn-override{
+	background-image:none;
+	background-color:#d13d19;
+	color: #fff;
+	font-size: 14px;
+    border-radius: 2px;
+    line-height: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 66, 0);
+	box-shadow:0 0 0 0;
+
+   
+}
+#btn-override:hover {
+    color: #fff;
+    background-color: #8c2911;
+    border-color: #8c2911;
+}
+.logo-left{
+	direction:ltr;
+	float:left;
+}
+#header-slider{
+	background-color: #fff;
+   	box-shadow:0 0 0 0;
+}
+.header-global .user .settings-language-form .language-selector{
+	font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 36px;
+    background: #17559a;
+    border-color: #17559a;
+    color: #ffffff;
+    font-family: DroidKufi;
+    font-style: normal;
+}
+.header-global .user .settings-language-form .language-selector::-ms-expand {
+     display: none;
+}
+#about{
+	height: 320px;
+    margin-top: 47px;
+    padding-top: 24px;
+}
+
+.course-img{
+	height:125px;
+}
+
+#search-bar {
+
+    position: inherit;
+}
+.dashboard-notifications{
+    padding-top:60px;
+}
+
+#unenroll-modal{
+    top: 290px; 
+    
+}
+
+#modal_clone {
+    right:330px;
+    top:267px;
+}
+
+.subjects-container{
+    padding:0 10px 0 10px ;
+}
+
+
+#content {
+   margin-top:40px; 
+}
+
+#subject_name{
+    text-transform: uppercase;
+}
+
+.post-img2{
+    height:100px;
+}
+.header-global.slim{
+    padding:0;
+}
+.Header-2{
+    background-color: #fff;
+    position: relative;
+    z-index: 99;
+    -webkit-box-shadow: 0px 5px 9px 1px rgba(144, 161, 180, 0.2);
+    box-shadow: 0px 5px 9px 1px rgba(144, 161, 180, 0.2);
+    -moz-box-shadow: 0px 5px 9px 1px rgba(144, 161, 180, 0.2);
+}
+
+/**- Discussion -**/
+.view-discussion-home .home-title{
+    font-size: 16px;
+}
+.view-discussion-home .label{
+    font-size: 16px;
+}
+.forum-nav-browse-title{
+    font-size: 12px;
+}
+.forum-nav-browse-filter-input{
+    font-size:12px !important;
+}
+.view-discussion-home .helpgrid-row .row-item-full, .view-discussion-home .helpgrid-row .row-item{
+    font-size: 10px;
+}
+.view-discussion-home .helpgrid-row .row-item-full .icon, .view-discussion-home .helpgrid-row .row-item .icon{
+    font-size: 27px;
+}
+
+.login-register .form-field label, .financial-assistance-wrapper .financial-assistance-form .form-field label{
+    font-size: 14px;
+    font-family: 'DroidKufi';
+}
+
+.login-register .form-field label, .financial-assistance-wrapper .financial-assistance-form .form-field label, .login-register .form-field input, .financial-assistance-wrapper .financial-assistance-form .form-field input, .login-register .form-field textarea, .financial-assistance-wrapper .financial-assistance-form .form-field textarea{
+    font-family: 'DroidKufi';
+     font-size: 14px;
+}
+
+.login-register .form-field input, .financial-assistance-wrapper .financial-assistance-form .form-field input{
+    font-size: 14px;
+    font-family: 'DroidKufi';
+
+}
+
+.wrapper-account-settings .account-settings-container{
+    padding-top: 25px;
+}

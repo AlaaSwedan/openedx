@@ -1,0 +1,5 @@
+XSym
+0113
+91c27a2e2e103c4caf264e9c4a9e5316
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NRCustomMetrics.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              

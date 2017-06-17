@@ -1,0 +1,301 @@
+## mako
+<%page expression_filter="h" args="online_help_token"/>
+<%namespace name='static' file='static_content.html'/>
+<%namespace file='main.html' import="login_query"/>
+<%!
+from django.core.urlresolvers import reverse
+from django.utils.translation import ugettext as _
+
+from context_processors import doc_url
+from lms.djangoapps.ccx.overrides import get_current_ccx
+from openedx.core.djangolib.markup import HTML, Text
+
+# App that handles subdomain specific branding
+from branding import api as branding_api
+# app that handles site status messages
+from status.status import get_site_status_msg
+from openedx.core.djangoapps.user_api.accounts.image_helpers import get_profile_image_urls_for_user
+%>
+<%
+self.real_user = real_user if real_user != UNDEFINED else user
+%>
+
+## Provide a hook for themes to inject branding on top.
+<%block name="navigation_top" />
+
+## Add UI Toolkit components if using the Pattern Library
+% if uses_pattern_library:
+    <%block name="js_extra">
+    <%static:require_module module_name="js/header_factory" class_name="HeaderFactory">
+    HeaderFactory();
+    </%static:require_module>
+    </%block>
+% endif
+
+<%block>
+<%
+try:
+    course_id = course.id
+except:
+    # can't figure out a better way to get at a possibly-defined course var
+    course_id = None
+site_status_msg = get_site_status_msg(course_id)
+%>
+% if site_status_msg:
+<div class="site-status">
+  <div class="inner-wrapper">
+    <span class="white-error-icon"></span>
+    <p>${site_status_msg}</p>
+  </div>
+</div>
+% endif
+</%block>
+  <header id="global-navigation " class="header-global ${"slim" if course else ""}" >
+  % if static.show_language_selector():
+                 <% languages = static.get_released_languages() %>
+                  % if len(languages) > 1:
+                  <ol class="user Nav_lang_ol Dis_nav">
+                    <li class="primary">
+                      <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
+                        <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
+                        % if user.is_authenticated():
+                        <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">
+                        % else:
+                        <input title="session update url" type="hidden" class="url-endpoint" value="${reverse('session_language')}" data-user-is-authenticated="false">
+                        % endif
+                        <label><span class="sr fa fa-angle-down">${_("Choose Language")}</span>
+                            <select class="input select language-selector L_Selection" id="settings-language-value" name="language">
+
+                              % for language in languages:
+                                % if language[0] == LANGUAGE_CODE:
+                                  <option value="${language[0]}" selected="selected">${language[1]}</option>
+                                % else:
+                                  <option value="${language[0]}" >${language[1]}</option>
+                                % endif
+                              % endfor
+                            </select>
+                        </label>
+                      </form>
+                    </li>
+                  </ol>
+                  % endif
+                  % endif
+    <div class="top-bar F_bar">
+        <!-- top-bar -->
+      <div class="test-container">
+          <div class="row" id="row">
+              <div class="col-md-4 hidden-xs hidden-sm welcome_text">
+                  <p class="mail-text">${_("Welcome to our website")}</p>
+              </div>
+          </div>
+      </div>
+    </div>
+   
+    <!-- <nav class="wrapper-header" aria-label="${_('Global')}"> -->
+% if user.is_authenticated():
+<div id="sticky-wrapper " class="sticky-wrapper Header-2" style="height: 103px;">
+ %else:
+ <div id="sticky-wrapper" class="header" style="height: 103px;">
+ %endif
+
+   <div class="header ">
+        <div class="test-container">
+            <div class="col-xs-12" id="row">
+              <div class="col-xs-12">
+                <div class="col-md-3 col-sm-12 col-xs-6 logo-left">
+                    <h1 class="logo logo-discu">
+                      <a href="${marketing_link('ROOT')}">
+                        <%block name="navigation_logo">
+                            <img src="${branding_api.get_logo_url(is_secure)}" style="height: 103px;" alt="${_("{platform_name} Home Page").format(platform_name=static.get_platform_name())}"/>
+                        </%block>
+                      </a>
+                    </h1>
+                </div>
+                % if user.is_authenticated():
+          <div class="col-md-5  col-sm-12 col-xs-12 ">
+               %else:
+              <div class="col-md-8  col-sm-12 col-xs-12 ">
+                %endif
+                <div id="navigation" class="disc-nav">
+                  <!-- navigation start-->
+                  <ul id="disc-ul">
+                    <li class="active disc-li"><a href="${marketing_link('ROOT')}" class="animsition-link">${_("Home")}</a>
+                    </li>
+                    <li class="disc-li"><a href="${marketing_link('COURSES')}" class="animsition-link">${_("Explore courses")}</a>
+                    </li>
+                    <li class="disc-li"><a href="/subjects" class="animsition-link">${_("CATEGORIES")}</a>
+                    </li>
+                    % if user.is_authenticated():
+                    <%block name="navigation_global_links_authenticated">
+                    %if settings.FEATURES.get('ENABLE_SYSADMIN_DASHBOARD','') and user.is_staff:
+                    <li>
+                      ## Translators: This is short for "System administration".
+                      <a href="${reverse('sysadmin')}">${_("Sysadmin")}</a>
+                    </li>
+                      %endif
+                      </%block>
+                      %else:
+                      <%block name="navigation_other_global_links">
+                      % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                      % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                      <li>
+                        <a class="animsition-link" href="${reverse('course-specific-register', args=[course.id.to_deprecated_string()])}">${_("Register")}</a>
+                      </li>
+                        % else:
+                        <li>
+                          <a class="animsition-link" href="/register${login_query()}">${_("Register")}</a>
+                        </li>
+                          % endif
+                          % endif
+                          </%block>
+                          <%block name="navigation_sign_in">
+                        <li>
+                          % if not settings.FEATURES['DISABLE_LOGIN_BUTTON']:
+                          % if course and settings.FEATURES.get('RESTRICT_ENROLL_BY_REG_METHOD') and course.enrollment_domain:
+                          <a class="animsition-link" href="${reverse('course-specific-login', args=[course.id.to_deprecated_string()])}${login_query()}">${_("Sign in")}</a>
+                                          % else:
+                          <a class="animsition-link" href="/login${login_query()}">${_("Sign in")}</a>
+                          % endif
+                          % endif
+                        </li>
+                        </%block>
+                         %endif
+                  </ul>
+                </div>
+              </div>
+               % if user.is_authenticated():
+              <div class="col-md-1 hidden-sm hidden disc-search">
+                <!-- search start-->
+                  <div class="search-nav"> <a class="search-btn " role="button" data-toggle="collapse" href="#searchbar" aria-expanded="false"><i class="fa fa-search disc-fa"></i></a>
+                  </div>
+              </div>
+              <div class="collapse searchbar course-search hidden disc-search" id="searchbar">
+                <div class="search-area">
+                  <div class="test-container">
+                    <div class="row">
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-1">
+                          <form method="get" action="/courses">
+                            <div class="input-group">
+                              <input type="text" class="search-input form-control" name="search_query" type="text" placeholder="${_("Search for a course")}">
+                              </input>
+                              <span class="input-group-btn">
+                                <button class="search-button " type="submit">${_("Go")}
+                                </button>
+                              </span> 
+                            </div>
+                            <!-- /input-group -->
+                          </form>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+               %else:
+                % if settings.FEATURES.get('ENABLE_COURSE_DISCOVERY'):
+            
+                <div class="col-md-1 hidden-sm">
+                    <!-- search start-->
+                    <div class="search-nav"> <a class="search-btn " role="button" data-toggle="collapse" href="#searchbar" aria-expanded="false"><i class="fa fa-search"></i></a>
+
+                    </div>
+                </div>
+                <div class="collapse searchbar course-search" id="searchbar">
+                    <div class="search-area">
+                        <div class="container">
+                            <div class="row">
+                              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 search-1">
+                                <form method="get" action="/courses">
+                                    <div class="input-group">
+                                        <input type="text" class="search-input form-control" name="search_query" type="text" placeholder="${_("Search for a course")}">
+                                         </input>
+                                        <span class="input-group-btn">
+                                            <button class="search-button " id="btn-override" type="submit">${_("Go")}
+                                            </button>
+                                        </span> 
+                                    </div>
+                                    <!-- /input-group -->
+                                  </form>
+                              </div>
+                                <!-- /.col-lg-6 -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                %endif
+                %endif
+                % if user.is_authenticated():
+                <div class="col-md-4 admin-nav " id="navigation">
+                 
+                    <ul class="pull-right">
+                      <li>
+                          <a class="animsition-link" href="${reverse('account_settings')}" class="user-link">
+                              
+                              <span class="sr">${_("Dashboard for:")}</span>
+                              <%
+                              username = self.real_user.username
+                              profile_image_url = get_profile_image_urls_for_user(self.real_user)['medium']
+                              %>
+                             
+                              <div class="label-username">
+                          <i class="fa fa-user"></i> ${username}</div>
+                          </a>
+                        </li>
+                        <li>
+                          
+                          <a class="animsition-link" href="${reverse('logout')}" role="menuitem" class="user-link"> <i class="fa fa-sign-out"></i> ${_("Sign Out")}
+                          </a>
+                      </li>
+       
+                  </ul>
+                </div>
+                % if should_display_shopping_cart_func() and not (course and static.is_request_in_themed_site()): # see shoppingcart.context_processor.user_has_cart_context_processor
+                <ol class="user ">
+                  <li class="primary">
+                    <a class="shopping-cart" href="${reverse('shoppingcart.views.show_cart')}">
+                    <span class="icon fa fa-shopping-cart" aria-hidden="true"></span> ${_("Shopping Cart")}
+                    </a>
+                  </li>
+                </ol>
+                % endif
+                % else:
+                <!-- <ol class="left list-inline nav-global"> -->
+                <%block name="navigation_global_links">
+                  % if static.get_value('ENABLE_MKTG_SITE', settings.FEATURES.get('ENABLE_MKTG_SITE', False)):
+                  <li class="item nav-global-01">
+                    <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+                  </li>
+                  % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+                  <li class="item nav-global-02">
+                    <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+                  </li>
+                  % endif
+                  <li class="item nav-global-03">
+                    <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+                  </li>
+                  % endif
+                </%block>
+                % endif   
+            </div>
+              </div>
+                
+
+               
+          </div>
+       </div>
+    </div>
+</div>
+    <!-- </nav> -->
+</header>
+% if course:
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true">${Text(_('{begin_strong}Warning:{end_strong} Your browser is not fully supported. We strongly recommend using {chrome_link} or {ff_link}.')).format(
+    begin_strong=HTML('<strong>'),
+    end_strong=HTML('</strong>'),
+    chrome_link=HTML('<a href="https://www.google.com/chrome" target="_blank">Chrome</a>'),
+    ff_link=HTML('<a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>'),
+)}</div>
+<![endif]-->
+% endif
+
+<%include file="help_modal.html"/>

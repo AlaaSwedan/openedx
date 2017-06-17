@@ -1,0 +1,69 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.js_utils import dump_js_escaped_json
+%>
+<%inherit file="../main.html" />
+<%
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+%>
+
+<%namespace name='static' file='../static_content.html'/>
+
+% if course_discovery_enabled:
+<%block name="header_extras">
+  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
+  <script type="text/template" id="${template_name}-tpl">
+      <%static:include path="discovery/${template_name}.underscore" />
+  </script>
+  % endfor
+  
+</%block>
+% endif
+
+<%block name="pagetitle">${_("Courses")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="find-courses" >
+      <section class="courses-container">
+        <div class="row">
+          <div class=" col-md-12 col-sm-12 col-xs-12 text-center rate-table">
+            <div class="mb60 text-center section-title">
+             % if courses:
+                <h1 id="subject_name"> ${courses[0].course_subject}</h1>
+             %endif
+            </div>
+          </div>
+        </div>
+        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
+          <ul class="courses-listing">
+          % if courses:
+              %for course in courses:
+                <li class="courses-listing-item">
+                 <%include file="../subject_course.html" args="course=course" />
+                </li>
+              %endfor
+            %else:
+                <div class="rate-table ">
+                  <div class="container">
+                    <div class="row">
+                        <div class=" col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="mb60 text-center section-title">
+                                <!-- section title start-->
+                                <!-- <h1> ${_("CATEGORIES")} </h1> -->
+                                  <h2> ${_("No courses under this category yet ..")}</h2>
+                            </div>
+                            <!-- /.section title start-->
+                        </div>
+                    
+                    </div>
+                  </div>
+                </div>
+            %endif
+          </ul>
+        </div>
+
+
+      </section>
+    </section>
+</main>

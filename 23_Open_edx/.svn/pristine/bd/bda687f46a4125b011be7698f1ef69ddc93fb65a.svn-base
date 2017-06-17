@@ -1,0 +1,5 @@
+XSym
+0105
+5074289f583c39e911a2cf92a0805630
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NRTimer.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

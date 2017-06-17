@@ -1,0 +1,46 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+html, body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+.home{
+	max-width: 100%;
+}
+#main{
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+#content{
+	margin-top: 0;
+}
+.footer {
+  position: relative;
+  /* margin-top: -180px; negative value of footer height
+  height: 180px; */
+  clear: both;
+} 
+.header-global.slim h1.logo:after{
+	display: none
+}
+.header-global.slim{
+	padding: 0;
+}
+/* Progress */
+.overlay{
+	background: transparent;
+}
+
+body.view-in-course .wrapper-course-material, body.view-in-course .wrapper-preview-menu{
+      padding-bottom: 69px;
+    margin-bottom: -12px;
+}

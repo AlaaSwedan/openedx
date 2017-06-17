@@ -1,0 +1,164 @@
+
+<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="top-navbar-wrapper affix" data-spy="affix" data-offset-top="126">
+				<div class="top-navbar navbar">
+					<div class="container">
+						<div class="welcome-note text-muted">
+
+						</div>
+						<div class="langs">
+
+							<form method="post">
+								<input type="hidden" name="csrfmiddlewaretoken" value="CqQddn3B9ROcEiphsmS5aAK1mh5BWzzA">
+								<input type="hidden" name="language" value="ar">
+
+								<button type="submit" class="
+								btn btn-link
+								lang-btn
+								lang-btn-ar ar-font
+								active-lang
+								">
+									EN
+								</button>
+							</form>
+
+							<span class="sep"></span>
+
+							<!--<form action="https://courses.edraak.org/changelang/?next=https%3A//www.edraak.org/en/" method="post">
+							<input type='hidden' name='csrfmiddlewaretoken' value='CqQddn3B9ROcEiphsmS5aAK1mh5BWzzA' />
+							<input type="hidden" name="language" value="en">
+
+							<button type="submit"
+							class="
+							btn btn-link
+							lang-btn
+							lang-btn-en en-font
+
+							">
+							En
+							</button>
+							</form>-->
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-navbar-wrapper affix" data-spy="affix" data-offset-top="126">
+				<div class="bottom-navbar">
+				<div class="container col-md-12 col-xs-12" >
+							<div class="col-md-2 col-xs-2 col-md-offset-2">
+								<a href="" class="logo pull-left" target="">
+									<img src="images/logo.png" style='width:50%;' class="img_logo"/>
+								</a>
+							</div>
+							<div class='col-xs-6 col-md-1' >
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".nav-wrapper" aria-expanded="false" aria-controls="navbar">
+								<span class="sr-only">أظهر القائمة</span>
+								<span class="open-icon"> <i></i> <i></i> <i></i> </span>
+								<span class="close-icon"> <i></i> <i></i> </span>
+							</button>
+						  </div>
+							<div class="nav-wrapper  collapse col-md-4 ">
+								<div>
+								<ul class="nav navbar-nav " id="menu">
+									
+									<li class="screen-about">
+										<a class="get_url " url="courses/about.html" href="" target=""> <span class="text">من نحن </span> </a>
+	
+									</li>
+									<li class="mobile-about">
+										<div class="items">
+											<a role="menuitem" tabindex="-1" class="get_url " url="about-us/index.html" href="" target=""> عن المنصة </a>
+										</div>
+									</li>
+								
+									<li>
+										<a class="get_url " url="courses/index.html" href="" target=""> <span class="text">المقررات</span> </a>
+									</li>
+								
+	
+									<li>
+										<a href="http://openedx.northeurope.cloudapp.azure.com/login" target=""> <span class="text">دخول</span> </a>
+									</li>
+									<li>
+										
+									</li>
+									
+								</ul>
+								</div>
+								<div>
+								<a href="http://openedx.northeurope.cloudapp.azure.com/register?next=%2Fdashboard" class="nav-main-btn btn btn-info " target=""> سجّل الآن </a>			
+								</div>
+								
+	
+								<!-- <a href="http://openedx.northeurope.cloudapp.azure.com/register?next=%2Fdashboard" class="log btn btn-info" target=""> سجّل الآن </a> -->						
+									
+								<!-- <img src="images/logo.png" style='width: 50px;    margin-right: 150px;'/> -->
+	
+							</div>
+							<div class="col-md-2 col-xs-2 col-md-offset-1">
+								<a href="" class="logo" id="logo" target="">
+									<img src="images/logo.png" style='width: 50%;' class="img_logo"/>
+								</a>
+							</div>
+					</div>
+				</div>
+			</div>
+</nav>
+	
+		<div id="ques" class="container">
+			<!-- <div >
+				<div>
+					 -->
+					 <div class="b_crumb">
+					 	<br/> <br /> <br>
+	                    <ul>
+	                        <li><a href="index.html">الرئيسية 	</a></li>
+	                        <li><span> اﻷسئلة الشائعة</span></li>
+	                    </ul>
+               		 </div>
+               		 
+					<h1 class=" main-heading section_title">الأسئلة الشائعة</h1>
+					<br>
+					
+					<div class="clearfix"></div>
+					
+					<div class="form-group theme_form">
+						<div class="input-group input-group-lg ">
+							<input type="text" class="form-control ui-autocomplete-input" id="searchstring" placeholder="البحث عن .." autocomplete="off">
+							<span class="input-group-btn">
+								<button id="donesearch" class="btn btn-info" type="button">
+									<i class="fa fa-search fa-lg"></i>
+								</button> </span>
+						</div><!-- /input-group -->
+					</div>
+					<div class="clearfix"></div>
+
+					<div class="panel-group faq_accord " id="accordion" role="tablist" aria-multiselectable="true">
+
+						<div class="panel panel-default append">
+							<div class="panel-heading" role="tab">
+								<h4 class="panel-title">
+									<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#200" aria-expanded="false" aria-controls="collapseThree">طلب تقديم شكوى اخرى </a></h4>
+							</div>
+							<div id="200" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									السؤال ع الشكوي امتى
+								</div>
+							</div>
+						</div>
+						<div class="panel panel-default append">
+							<div class="panel-heading" role="tab">
+								<h4 class="panel-title"><a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#201" aria-expanded="false" aria-controls="collapseThree">طلب تقديم شكوى </a></h4>
+							</div>
+							<div id="201" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" style="height: 0px;">
+								<div class="panel-body">
+									انتهاء البرمجة اليوم وقد صدر هذا القرار
+								</div>
+							</div>
+						</div>
+					</div><!--end #accordion-->
+
+				</div><!--end col-xs-12 -->
+			<!-- </div>
+		</div> -->

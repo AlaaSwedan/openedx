@@ -1,0 +1,29 @@
+<%page expression_filter="h"/>
+<%! from django.utils.translation import ugettext as _ %>
+<%namespace name='static' file='/static_content.html'/>
+<%inherit file="../main.html" />
+
+    <section id="services-app">
+        <div class="container-fluid">
+            <div class="row">
+                
+                <div class="col-xs-6 col-xs-offset-3">
+                    
+                    <div class="image-mobile">
+                    	<img class="img1 img-responsive" src="${static.url('images/mobileApp.png')}" >
+                    </div>
+                    <div class="buttons-mobile">
+                    	<a href="#" class="app-btn wow bounceIn my-mobile" data-wow-delay=".6s" >App Store <i class="fa fa-apple"></i></a>
+                    	<a href="https://play.google.com/store/apps/details?id=org.egymoocs.mobile" class="app-btn wow bounceIn my-mobile2" data-wow-delay=".8s" 
+                    	 target="_blank">Google Play <i class="fa fa-android" aria-hidden="true"></i>
+</a>
+					</div>
+                </div>
+            </div>
+                
+                
+             
+                
+            </div>
+        </div>
+    </section>

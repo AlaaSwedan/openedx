@@ -1,0 +1,5 @@
+XSym
+0064
+57256dcd857e1712572e8c6a6758691b
+../../../FBSnapshotTestCase/FBSnapshotTestCase/UIImage+Compare.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

@@ -1,0 +1,5 @@
+XSym
+0132
+c6bd87e22b6462da0b329c1813106b7e
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NewRelicCustomInteractionInterface.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           

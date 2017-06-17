@@ -1,0 +1,5 @@
+XSym
+0118
+7d18b0d5371e98e5eee4bc3e3b0a6537
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NewRelicFeatureFlags.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

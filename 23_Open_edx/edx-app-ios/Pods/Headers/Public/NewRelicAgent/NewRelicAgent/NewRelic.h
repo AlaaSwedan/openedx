@@ -1,0 +1,5 @@
+XSym
+0106
+5b0c3d7b421d16f4025266ace841af23
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NewRelic.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

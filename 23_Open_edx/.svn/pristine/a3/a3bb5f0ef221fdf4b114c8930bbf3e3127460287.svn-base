@@ -1,0 +1,100 @@
+
+/*---------------
+		 override  ----------------- */
+ .mooc-nav-1{
+	padding:0;
+}
+.header-global {
+    border-bottom: 0px;
+    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0);
+}
+.header-global .wrapper-header{
+	padding:0;
+}
+.mooc-nav-2{
+	padding:0px;
+
+}
+.test-container{
+	box-sizing: border-box;
+    margin: 0 auto 0;
+    /* padding: 40px 0; */
+    max-width: 1180px;
+    min-width: 760px;
+    width: 100%;
+}
+.btn-default{
+	background-color:#d13d19;
+}
+.find-courses .search-facets .facet-list.collapse{
+	display:block;
+}
+#main {
+	margin-top: 66px;
+}
+.header-global .user .dropdown-menu{
+	left:-100px;
+	right:-100px;
+}
+.admin-nav{
+	padding-top:36px;
+}
+
+#a-slider{
+	color:#fff;
+}
+#a-slider:hover{
+	text-decoration:none;
+	background-color: #8c2911;
+	border-color: #8c2911;
+}
+#btn-override{
+	background-image:none;
+	background-color:#d13d19;
+	color: #fff;
+	font-size: 14px;
+    border-radius: 2px;
+    line-height: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 30px;
+    border: none;
+    text-shadow: 0 -1px 1px rgba(0, 0, 66, 0);
+	box-shadow:0 0 0 0;
+
+   
+}
+#btn-override:hover {
+    color: #fff;
+    background-color: #8c2911;
+    border-color: #8c2911;
+}
+.logo-left{
+	direction:ltr;
+	float:left;
+}
+#header-slider{
+	background-color: #fff;
+   	box-shadow:0 0 0 0;
+}
+.header-global .user .settings-language-form .language-selector{
+	font-size: 13px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 36px;
+    background: #17559a;
+    border-color: #17559a;
+    color: #ffffff;
+}
+.course-info header.course-profile
+{
+	margin-top: 0;
+    padding-top: 0;
+    height:auto;
+}
+.course-img{
+	height:125px;
+}
+

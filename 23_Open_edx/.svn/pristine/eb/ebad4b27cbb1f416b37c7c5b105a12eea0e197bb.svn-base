@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+<html class="no-js lang-ar"
+      lang="ar"
+      dir="rtl">
+
+<!-- Mirrored from www.edraak.org/privacy-policy/ by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 02 Oct 2016 04:32:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgMDWF9XGwIAVlRTBgUB"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(s){try{i("ierr",[s,(new Date).getTime(),!0])}catch(c){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,e,n){u&&(d+=1)}),s.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),s.on(m,function(){this.bstStart=Date.now()}),s.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t(17)(a),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){if(t[1]){var n=t[1];if("function"==typeof n){var r=c(n,"nr@wrapped",function(){return s(n,"fn-",null,n.name||"anonymous")});this.wrapped=t[1]=r}else"function"==typeof n.handleEvent&&s.inPlace(n,["handleEvent"],"fn-")}}),a.on(d+"-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",s)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("../index.html")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{c.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&"function"==typeof t&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t){function e(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(u){d([u,"",[r,a,o],s])}f(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(l){throw f(e+"err",[r,a,l],s),l}finally{f(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,u(t,nrWrapper),nrWrapper)}function n(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!c){c=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}c=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),e.inPlace=n,e.flag=a,e}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,a,i):i()}function n(n,r,o){t&&t(n,r,o);for(var i=e(o),a=l(n),s=a.length,c=0;c<s;c++)a[c].apply(i,r);var u=f[w[n]];return u&&u.push([v,n,r,i]),i}function d(t,e){m[t]=l(t).concat(e)}function l(t){return m[t]||[]}function p(t){return u[t]=u[t]||o(n)}function h(t,e){c(t,function(t,n){e=e||"feature",w[n]=e,e in f||(f[e]=[])})}var m={},w={},v={on:d,emit:n,get:p,listeners:l,context:e,buffer:h};return v}function i(){return new r}var a="nr@context",s=t("gos"),c=t(15),f={},u={},d=e.exports=o();d.backlog=f},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!g++){var t=y.info=NREUM.info,e=u.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){c(w,function(e,n){t[e]||(t[e]=n)});var n="https"===m.split(":")[0]||t.sslForHttp;y.proto=n?"https://":"http://",s("mark",["onload",a()],null,"api");var r=u.createElement("script");r.src=y.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function o(){"complete"===u.readyState&&i()}function i(){s("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var s=t("handle"),c=t(15),f=window,u=f.document,d="addEventListener",l="attachEvent",p=f.XMLHttpRequest,h=p&&p.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:p,REQ:f.Request,EV:f.Event,PR:f.Promise,MO:f.MutationObserver},t(12);var m=""+location,w={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-974.min.js"},v=p&&h&&h[d]&&!/CriOS/.test(navigator.userAgent),y=e.exports={offset:a(),origin:m,features:{},xhrWrappable:v};u[d]?(u[d]("DOMContentLoaded",i,!1),f[d]("load",r,!1)):(u[l]("onreadystatechange",o),f[l]("onload",r)),s("mark",["firstbyte",a()],null,"api");var g=0},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"a25be9a3ea","agent":"","transactionName":"blwBYUVYVhJXAkQNC1cWJUBZWkwIWQ8fCQVLUgZBXldfT0AIVRMXA2kRXEFYWxhmDlwNB0BvClBA","applicationID":"10251146","errorBeacon":"bam.nr-data.net","applicationTime":61}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+
+<meta name="description" content="شروط الخصوصية">
+
+
+
+
+<meta property="og:title" content="شروط الخصوصية | إدراك">
+<meta property="og:url" content="https://www.edraak.org/privacy-policy/">
+<meta property="og:description" content="شروط الخصوصية">
+<meta property="og:image" content="https://dfo1nnmfmvi1j.cloudfront.net/static/images/edraak-sq.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Edraak">
+
+
+
+<meta name="twitter:title" content="شروط الخصوصية | إدراك">
+<meta name="twitter:url" content="https://www.edraak.org/privacy-policy/">
+<meta name="twitter:description" content="شروط الخصوصية">
+<meta name="twitter:image" content="https://dfo1nnmfmvi1j.cloudfront.net/static/images/edraak-sq.png">
+
+
+
+
+
+
+<meta itemprop="name" content="شروط الخصوصية | إدراك">
+<meta itemprop="url" content="https://www.edraak.org/privacy-policy/">
+<meta itemprop="description" content="شروط الخصوصية">
+<meta itemprop="image" content="https://dfo1nnmfmvi1j.cloudfront.net/static/images/edraak-sq.png">
+
+
+
+    <title>شروط الخصوصية | إدراك</title>
+    <link rel="apple-touch-icon" href="../../dfo1nnmfmvi1j.cloudfront.net/static/apple-touch-icon.339ce95c4146.png">
+    <link rel="icon" type="image/x-icon" href="../../dfo1nnmfmvi1j.cloudfront.net/static/favicon.7ddabbfb8bbf.ico">
+    
+
+    
+        <link rel="stylesheet" href="../../dfo1nnmfmvi1j.cloudfront.net/static/styles/rtl.fcbc7f20fccf.css">
+    
+    
+</head>
+<body class="faq white-navbar privacy-policy">
+<!--[if lt IE 10]>
+<p class="browsehappy">
+     
+     
+أنت تتصفح حالياً باستخدام متصفح <strong>قديم</strong>. يرجى <a href="http://upgradeyourbrowser.org/">تحديث متصفحك</a>;لتحصل على تجربة أفضل.
+</p>
+<![endif]-->
+<div class="head-n-banner" data-spy="affix" data-offset-top="126">
+    <div class="top-navbar-wrapper" data-spy="affix" data-offset-top="126">
+        <div class="top-navbar navbar">
+            <div class="container">
+                <div class="welcome-note text-muted">
+                    
+                </div>
+                <div class="langs">
+                    
+
+
+
+
+    <form action="https://courses.edraak.org/changelang/?next=https%3A//www.edraak.org/privacy-policy/" method="post">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CqQddn3B9ROcEiphsmS5aAK1mh5BWzzA' />
+        <input type="hidden" name="language" value="ar">
+
+        <button type="submit"
+                class="
+                    btn btn-link
+                    lang-btn
+                    lang-btn-ar ar-font
+                    active-lang
+                ">
+            ع
+        </button>
+    </form>
+
+
+                    <span class="sep"></span>
+                    
+
+
+
+
+    <form action="https://courses.edraak.org/changelang/?next=https%3A//www.edraak.org/en/privacy-policy/" method="post">
+        <input type='hidden' name='csrfmiddlewaretoken' value='CqQddn3B9ROcEiphsmS5aAK1mh5BWzzA' />
+        <input type="hidden" name="language" value="en">
+
+        <button type="submit"
+                class="
+                    btn btn-link
+                    lang-btn
+                    lang-btn-en en-font
+                    
+                ">
+            En
+        </button>
+    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-navbar-wrapper" data-spy="affix" data-offset-top="126">
+        <div class="bottom-navbar">
+            <div class="container">
+                <a href="../index.html" class="logo"></a>
+
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target=".nav-wrapper"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">أظهر القائمة</span>
+                    <span class="open-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                    <span class="close-icon">
+                        <i></i>
+                        <i></i>
+                    </span>
+                </button>
+
+                <div class="nav-wrapper collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="screen-about">
+                            <a type="button" href="../about-us/index.html" class="dropdown-toggle disabled"
+                               data-toggle="dropdown" data-hover="dropdown" data-delay="100" data-close-others="false">
+                                <span class="text">عن إدراك</span>
+                                <i class="icon-chevron-down"></i>
+                            </a>
+
+                            <div class="dropdown-menu">
+                                <div class="triangle">
+    <div class="drawing">&nbsp;</div>
+</div>
+                                
+
+<div class="items">
+    <a role="menuitem" tabindex="-1" href="../about-us/index.html">
+        عن إدراك
+    </a>
+    <a role="menuitem" tabindex="-1" href="../about-us/team/index.html">
+        الفريق
+    </a>
+    <a role="menuitem" tabindex="-1" href="https://blog.edraak.org/">
+        المدونة
+    </a>
+</div>
+
+                            </div>
+                        </li>
+                        <li class="mobile-about">
+                            
+
+<div class="items">
+    <a role="menuitem" tabindex="-1" href="../about-us/index.html">
+        عن إدراك
+    </a>
+    <a role="menuitem" tabindex="-1" href="../about-us/team/index.html">
+        الفريق
+    </a>
+    <a role="menuitem" tabindex="-1" href="https://blog.edraak.org/">
+        المدونة
+    </a>
+</div>
+
+                        </li>
+                        <li class="hidden-sm">
+                            <a href="../help/how-it-works/index.html">
+                                <span class="text">كيف تتعلم عبر إدراك</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../courses/index.html">
+                                <span class="text">المساقات</span>
+                            </a>
+                        </li>
+                        <li class="hidden-sm">
+                            <a href="../teach/index.html">
+                                <span class="text">علّم</span>
+                            </a>
+                        </li>
+                        
+                            <li>
+                                <a href="https://courses.edraak.org/login">
+                                    <span class="text">دخول</span>
+                                </a>
+                            </li>
+                        
+                    </ul>
+
+                    
+                        <a href="https://courses.edraak.org/register" class="nav-main-btn btn btn-info">
+                            سجّل الآن
+                        </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="banner-content"></div>
+    
+</div>
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 col-xs-10 col-xs-offset-1">
+        <div class="content-wrapper" id="content">
+            <div class="about">
+                <h1 class="main-heading" >سياسة <strong>الخصوصية</strong></h1>
+
+
+                <p>
+                    من بالغ الأهمية لدينا في إدراك أن نحتفظ بسرية وأمان معلوماتكم الشخصية، ويُشار لأي معلومات عنكم
+                    تزودوننا بها عند استخدام موقعنا، مثل المعلومات التي تقدمونها عند التسجيل للحصول على حساب مستخدم أو
+                    عند الدخول في تعاملات عبر الموقع والتي قد تتضمن (على سبيل المثال لا الحصر) اسمك ومعلومات الاتصال
+                    والجنس وتاريخ الميلاد والمهنة؛ جمعاً بـ"معلومات شخصية"، كما أن أي إشارة لـ "نحن" و"لنا" تُعتبَر
+                    إشارة إلى إدراك. </p>
+
+                <p>
+                    سوف نبذل الجهود المعقولة تجارياً للحفاظ على أمان معلوماتك الشخصية عملاً بسياسة الخصوصية هذه.
+                </p>
+
+                <p>
+                    تنطبق سياسة الخصوصية هذه فقط على المعلومات التي نجمعها من خلال موقع إدراك (يشار له فيما يلي بـ
+                    "الموقع" وهو يشمل جميع المحتوى والصفحات الموجودة ضمن الموقع الإلكتروني edraak.org) ولا تنطبق على
+                    المعلومات التي قد نحصل عليها منك بطرق أخرى.
+                </p>
+
+                <br>
+
+                <p class="category-name">الموافقة على نقل المعلومات الشخصية</p>
+
+                <p>
+                    بموجب هذه الوثيقة، أنت توافق على جمع إدراك لمعلوماتك الشخصية - كما بينت في سياسة الخصوصية هذه -
+                    واستخدامها والإفصاح عنها والاحتفاظ بها، بما في ذلك على سبيل المثال لا الحصر: نقل معلوماتك الشخصية
+                    بين إدراك والغير والشركات التابعة والفرعية المبينة في سياسة الخصوصية هذه.
+                </p>
+
+                <p>
+                    وتعتبر أي موافقة متعلقة بحق نقل المعلومات المشار إليها في هذه الفقرة أنها تتضمن موافقتكم على نقل
+                    المعلومات الشخصية القابلة للتطبيق إلى اختصاص قضائي آخر، وهذا قد ينجم عنه مستوى مختلف من حماية
+                    الخصوصية عما هو سارٍ في بلدك.
+                </p>
+
+                <br>
+
+                <p class="category-name">المعلومات التي نجمعها وكيف نستخدمها</p>
+
+                <p>
+                    نحن نقوم بجمع المعلومات بما فيها المعلومات الشخصية عندما تقوم بالتسجيل للحصول على حساب مستخدم و/أو
+                    المشاركة في المساقات و/أو أن ترسل لنا بريداً إلكترونياً و/أو تشارك في منتدياتنا العامة، كما نقوم
+                    بجمع بعض معلومات الاستخدام حول أداء الطلبة وأنماط التعلّم، بالإضافة لما سبق فنحن نتتبّع المعلومات
+                    التي تبيّن سجلات مثل الصفحات التي تزورها في موقعنا ومواعيد زيارتها والترتيب الذي تمت زيارتها فيه وأي
+                    الروابط التشعبية وغيرها من أدوات واجهة المستخدم قد استعملتها.
+                </p>
+
+                <p>
+                    قد نقوم بتسجيل عنوان بروتوكول الإنترنت ونظام التشغيل والمتصفح الذي يستخدمه كل مستخدم وقد نتمكن -
+                    بناءً على عنوان بروتوكول الإنترنت - من تحديد مزود خدمة الإنترنت الخاص بالمستخدم والموقع الجغرافي
+                    لنقطة اتصاله.
+                </p>
+
+                <p>
+                    نستخدم مجموعة متنوعة من أدوات تحليل الإنترنت لجمع هذه المعلومات غير أن بعض المعلومات تُجمَع بواسطة
+                    الكوكيز، ويجب أن تكون قادراً على أن تتحكم فيما إذا كان متصفحك يقبل الكوكيز وكيفية قبوله لها حيث أن
+                    معظم المتصفحات تقدّم تعليمات لكيفية إعادة ضبط المتصفح كي يرفض الكوكيز من خلال قسم "المساعدة" في شريط
+                    الأدوات، غير أنك إذا رفضت "الكوكيز" من موقعنا فإن العديد من الخصائص والفوائد التي يقدّمها موقعنا لك
+                    قد لا تعمل كما ينبغي.
+                </p>
+
+                <br>
+
+                <p class="category-name">الاستخدام والإفصاح للغير</p>
+
+                <p>
+                    يمكن أن نقوم نحن وشركاؤنا في التعليم ممّن يقدّمون المساقات عبر موقع إدراك باستخدام معلوماتك التي
+                    تُجمَع من الموقع من بين أمور أخرى (بما فيها معلوماتك الشخصية). في حال مشاركتنا أو إفصاحنا عن
+                    معلوماتك الشخصية للغير، يطالب هذا الغير بالتعامل مع معلومات الشخصية بسرية وأن يحافظ على الأمان
+                    الكافي لحماية المعلومات من الضياع أو سوء الاستخدام أو الاستخدام غير المسموح أو الإفصاح أو التعديل أو
+                    الإتلاف.
+                </p>
+
+                <p>
+                    سوف نقوم بالإفصاح عن المعلومات الشخصية المطلوبة من الغير ومشاركتها من أجل تلبية الطلب المذكور عند
+                    جمع هذه المعلومات مثل:
+                </p>
+
+                <ul style="list-style-type: circle; line-height: 25px">
+                    <li>تمكين المعاهد التعليمية الشريكة لنا من إقامة الدورات وإدارتها وتحسينها.</li>
+                    <li>مساعدتنا ومساعدة المؤسسات التعليمية في تحسين العروض التي تقدمها إدراك سواء الصعيد الفردي (مثلاً
+                        كادر الدورة عند العمل مع طالب) أو الجماعي، كما تساعدنا في تقييم دخول واستخدام الموقع وتأثير
+                        إدراك على مجتمع التعليم على النطاق العالمي.
+                    </li>
+                    <li>تتبّع الحضور الفردي والجماعي والتقدّم الحاصل والإكمال للدورات الإلكترونية وتحليل إحصائيات أداء
+                        الطالب والطريقة المستخدمة من قِبله للتعلّم.
+                    </li>
+                    <li>نشر المعلومات، غير المعلومات الشخصية، المجموعة حول الدخول إلى موقع إدراك واستخدامه وتأثيره وأداء
+                        الطلاب.
+                    </li>
+                    <li>إرسال تحديثات حول الدورات على الإنترنت التي تقدّمها إدراك أو غيرها من المناسبات، ومراسلتكم حول
+                        إخطارات عن منتجات أو خدمات إدراك أو الشركات التابعة لإدراك أو شركاء أعمال مختارين قد يهمك أمرهم،
+                        أو إرسال رسائل إلكترونية لك حول أي شؤون تتعلق بصيانة الموقع أو تحديثاته.
+                    </li>
+                    <li>لأغراض الأبحاث العلمية وخاصة على سبيل المثال: مجالات العلوم المعرفية والتعليم.</li>
+                    <li>أرشفة هذه المعلومات و/أو استخدامها من أجل التواصل معكم في المستقبل.</li>
+                    <li>الحفاظ على وظائف وأمان الموقع وبرنامجنا وأنظمتنا وشبكتنا وتحسينها.</li>
+                </ul>
+
+                <p>
+                    يمكن أن نشارك المعاهد التعليمية بالمعلومات التي نجمعها، ويمكن مشاركة هذه المعلومات (بما فيها
+                    المعلومات الشخصية) مع الغير على الشكل التالي:
+                </p>
+
+                <ul style="list-style-type: circle; line-height: 25px">
+                    <li>مزودي خدمات أو مقاولين يؤدون خدمات معينة نيابةً عنّا أو عن المؤسسات التعليمية بما في ذلك معالجة
+                        المعلومات التي تزودنا بها على الموقع أو تشغيل الموقع أو أقسام منه أو تزويد أو إدارة الدورات أو
+                        فيما يتعلق بجوانب أخرى من خدمات إدراك أو المؤسسات الشريكة.
+                    </li>
+                    <li>لأغراض الأبحاث العلمية (كما ذكرنا سابقاً)، غير أننا سنشارك المعلومات الشخصية الخاصة بك فقط
+                        بالمقدار الضروري لتلبية الغرض المذكور في وقت جمع هذه المعلومات.
+                    </li>
+                    <li>لتزويدكم بفرص التواصل مع مستخدمين آخرين ممّن قد يكون لهم نفس اهتماماتكم أو أهدافكم التعليمية،
+                        مثلاً، قد نوصيكم بشركاء دراسة محددين أو تعريفكم بطلاب متلقّين أو مرشدين محتملين. وفي هكذا حال
+                        فقد نستخدم المعلومات التي نجمعها حولكم لتحديد من قد يكون مهتماً بالتواصل معكم، لكننا لن نزود
+                        المستخدمين الآخرين سوى باسم المستخدم الخاص بكم ولن نفصح لهم عن اسمكم الحقيقي أو عنوان بريدكم
+                        الإلكتروني.
+                    </li>
+                    <li>قد نستضيف لأغراض التكامل مع خدمات الغير بعض المحتوى الذي لا تتحكم به إدراك كاستضافة فيديوهات من
+                        موقع يوتيوب.
+                    </li>
+                </ul>
+
+                <p>
+                    إضافة لما سبق فقد نشارك معلومات جمعناها ولا تشكل إمكانية تعرّف شخصي عليكم مع العموم ومع الغير، بما
+                    في ذلك على سبيل المثال لا الحصر: الباحثين وشركاء الأعمال.
+                </p>
+
+                <br>
+
+                <p class="category-name">روابط إلى مواقع إلكترونية أخرى</p>
+
+                <p>
+                    قد يحتوي الموقع روابط إلى مواقع إلكترونية للغير كمزودي محتوى آخرين وبعض مزودي الخدمات، غير أن هذه
+                    المواقع الأخرى ليست تحت إدارتنا وبذلك عليك أن تتفهم وتوافق على أننا لا نتحمل مسؤولية جمع هذه المواقع
+                    واستخدامها لمعلوماتك ما لم تتم الإشارة له بغير ذلك في سياسة الخصوصية هذه. نوصيكم بالحرص عندما يتم
+                    توجيهكم إلى موقع الغير لتقوموا بمراجعة سياسات الخصوصية لكل موقع تزورونه وتستخدمونه.
+                </p>
+
+                <br>
+
+                <p class="category-name">تغييرات سياسة الخصوصية</p>
+
+                <p>
+                    يرجى الأخذ بعين الاعتبار أننا نقوم بمراجعة سياسة الخصوصية هذه دورياً وقد نُجري عليها بعض التغييرات،
+                    عندما نُجري أية تغييرات فإن رابط سياسة الخصوصية سيحتوي إشارة "مراجعة حديثة (مع التاريخ)" مما يشير
+                    إلى وجوب مراجعتك للأحكام الجديدة التي تعتبر سارية فور نشر السياسة الجديدة على هذه الصفحة مع تاريخ
+                    نفاذ جديد. ستبقى هذه الإشارة موضوعة إلى جانب رابط سياسة الخصوصية لمدة عشرة (10) أيام على الأقل بعد
+                    إجراء التحديثات. ويُعتبَر دخولك الموقع بعد إجراء أي تغييرات موافقةً مسبقة منك على سياسة الخصوصية
+                    المعدّلة وأية تغييرات فيها، وفي حال استلامك إشعار بالتعديلات والمذكور أعلاه، احرص على زيارة هذه
+                    الصفحة بشكل دوري للتأكد من معرفتك بأحدث نسخة من سياسة الخصوصية.
+                </p>
+
+
+            </div>
+
+        </div>
+        <br>
+        <br>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="brief col-md-4 col-xs-12">
+                إدراك هي مبادرة من مؤسسة الملكة رانيا للتعليم والتنمية
+            </div>
+            <div class="main-links col-md-4 col-md-offset-4 col-xs-12">
+                <ul>
+                    <li>
+                        <a href="../about-us/index.html">عن إدراك</a>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="https://blog.edraak.org/">المدونة</a>
+                    </li>
+                    <li>
+                        <a href="../contact-us/index.html">تواصل معنا</a>
+                    </li>
+                    <li class="mobile-hidden">
+                        <a href="../help/faq/index.html">الأسئلة المتكررة</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sub-links col-md-6 col-xs-12">
+                <ul>
+                    <li>
+                        <a href="index.html">سياسة الخصوصية</a>
+                    </li>
+                    <li>
+                        <a href="../terms-of-service/index.html">شروط الخدمة</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social col-md-6">
+                <ul>
+                    <li>
+                        <a href="https://linkedin.com/company/edraak" target="_blank">
+                            <i class="icon-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/user/edraakorg" target="_blank">
+                            <i class="icon-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+EdraakOrg" target="_blank">
+                            <i class="icon-google-plus"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/edraakorg" target="_blank">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://twitter.com/edraak" target="_blank">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrights">
+            <p>
+                © جميع الحقوق محفوظة ٢٠١٦ إدراك
+            </p>
+        </div>
+    </div>
+</div>
+<div id="fb-root"></div>
+<!-- Facebook root div for tracking and like buttons -->
+
+
+
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "../../connect.facebook.net/ar_AR/sdk.js#xfbml=1&appId=154705034724967&version=v2.3";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','../../connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1396158884003568');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="../../www.facebook.com/tr78fa.gif?id=1396158884003568&amp;ev=PageView&amp;noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-45523517-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-W75VWJ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W75VWJ');</script>
+
+
+<script type="text/javascript" src="../../dfo1nnmfmvi1j.cloudfront.net/static/CACHE/js/591ba090d198.js"></script>
+
+<script type="text/javascript" src="../../dfo1nnmfmvi1j.cloudfront.net/static/CACHE/js/da6d156924cf.js"></script>
+
+</body>
+
+<!-- Mirrored from www.edraak.org/privacy-policy/ by HTTrack Website Copier/3.x [XR&CO'2013], Sun, 02 Oct 2016 04:32:43 GMT -->
+</html>

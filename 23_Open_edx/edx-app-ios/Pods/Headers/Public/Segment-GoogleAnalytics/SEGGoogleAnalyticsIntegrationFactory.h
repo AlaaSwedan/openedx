@@ -1,0 +1,5 @@
+XSym
+0083
+29a32b8ae73cce598c2a029ebd22df55
+../../../Segment-GoogleAnalytics/Pod/Classes/SEGGoogleAnalyticsIntegrationFactory.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            

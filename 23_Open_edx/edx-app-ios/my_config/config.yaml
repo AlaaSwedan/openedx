@@ -1,0 +1,5 @@
+API_HOST_URL: 'http://egymoocs.nelc.edu.eg/' 
+ENVIRONMENT_DISPLAY_NAME: 'mooc'
+PLATFORM_NAME: 'MOOC'
+PLATFORM_DESTINATION_NAME: 'example.com'
+FEEDBACK_EMAIL_ADDRESS: 'openedx.deltasoft@gmail.com'

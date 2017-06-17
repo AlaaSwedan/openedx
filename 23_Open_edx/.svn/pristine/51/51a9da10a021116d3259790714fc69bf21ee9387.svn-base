@@ -1,0 +1,10 @@
+COURSE_ENROLLMENT : 
+    { 
+
+      'TYPE': 'native',
+      'COURSE_SEARCH_URL':'http://egymoocs.nelc.edu.eg/courses/v1/courses/',
+      'EXPLORE_SUBJECTS_URL':'http://egymoocs.nelc.edu.eg/api/courses/v1/courses/',
+      'SEARCH_BAR_ENABLED':true,
+      'COURSE_INFO_URL_TEMPLATE':'http://egymoocs.nelc.edu.eg/api/courses/v1/courses/'
+
+    }

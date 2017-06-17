@@ -1,0 +1,5 @@
+XSym
+0055
+39365e1a585ed17f0749ee98e99a69cd
+../../../Smartling.i18n/Smartling.i18n/SLLocalization.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        

@@ -1,0 +1,68 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+html, body {
+  height: 100%;
+}
+..header-global.slim h1.logo:before{
+	display: none
+}
+#wrap {
+  min-height: 100%;
+}
+
+.home{
+	max-width: 100%;
+}
+#main{
+	margin-top: 0;
+	margin-bottom: 40px;
+}
+#content{
+	margin-top: 0;
+}
+.footer {
+  position: relative;
+  /* margin-top: -180px; negative value of footer height
+  height: 180px; */
+  clear: both;
+} 
+.header-global.slim h1.logo:after{
+	display: none
+}
+.header-global.slim{
+	padding: 0;
+}
+/* Progress */
+.overlay{
+	background: transparent;
+}
+body.view-in-course .wrapper-course-material, body.view-in-course .wrapper-preview-menu{
+	    padding-bottom: 69px;
+    margin-bottom: -12px;
+}
+
+/* wiki */
+
+.wiki-wrapper{
+	margin-top: -30px;
+}
+body.view-in-course .wrapper-course-material .course-material .course-tabs{
+	margin-top: 50px;
+}
+.nav-tabs>li{
+	width: 100%
+}
+.nav-tabs{
+	border-bottom: 1px solid transparent
+}
+section.wiki .breadcrumb{
+	margin: -23px 0 0 40px;
+}
+section.wiki a.btn{
+	margin: -12px 0 0 40px
+}

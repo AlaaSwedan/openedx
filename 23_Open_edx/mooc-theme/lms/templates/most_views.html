@@ -1,0 +1,38 @@
+<%def name="online_help_token()"><% return "course" %></%def>
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+from student.models import CourseEnrollment
+%>
+<%page args="course" expression_filter="h"/>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="media-body" id="${course.id}">
+    <a href="${reverse('about_course', args=[course.id.to_deprecated_string()])}">
+      <img class="edit-img" src="${course.course_image_url}" alt="${course.display_name_with_default} ${course.display_number_with_default}">
+      <p>${course.display_name_with_default}</p>
+      <% enrollment_count =  CourseEnrollment.objects.num_enrolled_in(course.id)  %>
+
+      <div class="pull-left">${enrollment_count}</div>
+      <%
+        if course.start is not None:
+          course_date_string = course.start.strftime('%Y-%m-%dT%H:%M:%S%z')
+        else:
+          course_date_string = ''
+      %>
+      % if isinstance(course_start_date, str):
+        <div class="pull-right">${course_start_date}</div>
+      % else:
+        <div class="pull-right localized_datetime date_div" data-format="shortDate" data-datetime="${course_date_string}" data-string="${_("Starts in: {date}")}"></div>
+      %endif
+    </a>
+  </div> 
+</div>
+
+
+
+<%static:require_module_async module_name="js/dateutil_factory" class_name="DateUtilFactory">
+    DateUtilFactory.transform(iterationKey=".localized_datetime");
+</%static:require_module_async>
+

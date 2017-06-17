@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+    <title>مشروع</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Css -->
+    <link href="bootstrap-assets/css/bootstrap-rtl.min.css" rel="stylesheet">
+
+    <!-- Style -->
+    <link href="plugins/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.theme.css" rel="stylesheet">
+    <link href="plugins/owl-carousel/owl.transitions.css" rel="stylesheet">
+    <link href="plugins/Lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="plugins/Icons/et-line-font/style.css" rel="stylesheet">
+    <link href="plugins/animate.css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <!-- Icons Font -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <!-- Preloader
+	============================================= -->
+    <div class="preloader"><i class="fa fa-circle-o-notch fa-spin fa-2x"></i></div>
+    <!-- Header
+	============================================= -->
+    <section class="main-header slider-ltr">
+        
+      
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#"><img class="logo logo1" src="img/logo/1.png"></a>
+                    <a href="#"><img class="logo logo2" src="img/logo/2.png"></a>
+                    <a href="#"><img class="logo" src="img/logo/3.png"></a>
+                    
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse text-center" id="bs-example-navbar-collapse-1">
+                    <div class="col-md-5 col-xs-12">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">الرئيسية</a></li>
+                            <li><a href="#">الخدمات</a></li>
+<!--                            <li><a href="#">الأعمال</a></li>-->
+                            <li><a href="#">عنا</a></li>
+                            <li><a href="App.html">التطبيقات</a></li>
+                            <li><a href="../en/index.html">English</a></li>
+                        </ul>
+                    
+                    </div>
+                    
+                      <ul class="nav navbar-nav nav2">
+                            <li class="first-list"><a href="#">تسجيل</a></li>
+                            <li><a href="#">دخول</a></li>
+                        </ul>
+                    
+                        <div class="search-sty search hidden-sm hidden-xs"><input class="edit-input" type="search" placeholder="ابحث"><i class="fa fa-search"></i> </div>
+                    
+                    
+                    
+                     
+                </div>
+            </div>
+        </nav>
+      
+        
+        <div id="owl-hero" class="owl-carousel owl-theme">
+            <div class="item" style="background-image: url(img/sliders/Slide.jpg);height:488px;">
+                <div class="caption">
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/sliders/Slide2.jpg);height:488px;">
+                <div class="caption">
+                </div>
+            </div>
+            <div class="item" style="background-image: url(img/sliders/Slide3.jpg); height:488px;">
+                <div class="caption">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome
+	============================================= -->
+    <section id="welcome">
+        <div class="container">
+            <h2>الموضوع</h2>
+            <div class="row">
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories1">
+                    <div class="categories1-in"><a href="#">
+                       <i class="fa fa-television"></i>
+                        <h3>الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories2">
+                    <div class="categories1-in"><a href="#">
+                       <i class="fa fa-money"></i>
+                        <h3>الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories3">
+                    <div class="categories1-in"><a href="#">
+                       <i class="fa fa-bullseye"></i>
+                        <h3>الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories4">
+                    <div class="categories1-in"><a href="#">
+                       <i class="fa fa-balance-scale"></i>
+                        <h3>الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories5">
+                    <div class="categories1-in"><a href="#">
+                       <i class="fa fa-line-chart"></i>
+                        <h3>الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                    <div class="categories6">
+                    <div class="categories1-in"><a class="edit-color" href="#">
+                       <i class="fa fa-user"></i>
+                        <h3 class="edit-color">الموضوع</h3> 
+                    </a></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services
+	============================================= -->
+    
+    <section id="services">
+        <div class="container">
+            <h2>الأكثر مشاهدة</h2>
+            <div class="services-box">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-2 col-lg-offset-1 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/1.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/2.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/3.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/4.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/5.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay=".6s">
+                        <div class="col-lg-2 col-lg-offset-1 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/6.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/5.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/3.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/1.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="edit-img" src='img/portfolio/2.jpg'>
+                            <p>الموضوع</p>
+                            <div class="pull-left">4xxx</div> <div class="pull-right">5555</div> </a>
+                        </div>
+                    </div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio
+	============================================= -->
+    
+    <section id="portfolio">
+        
+        <div class="container">
+            <div class="services-box">
+                <div class="row wow fadeInUp" data-wow-delay=".3s">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div>
+                            <h4>الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع  </h4></br></br></br>
+                           <p>الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع الموضوع  </p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-8">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/6.jpg'>
+                            <p>الموضوع</p>
+                             </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/5.jpg'>
+                            <p>الموضوع</p>
+                             </a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/4.jpg'>
+                            <p>الموضوع</p>
+                             </a>
+                        </div>
+                    </div>
+                    
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/3.jpg'>
+                            <p>الموضوع</p>
+                             </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/2.jpg'>
+                            <p>الموضوع</p>
+                             </a>
+                        </div>
+                    </div>
+                        
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <div class="media-body">
+                           <a href="#"> <img class="img-responsive" src='img/portfolio/1.jpg'>
+                            <p>الموضوع</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+
+    <!-- Some Fune Facts
+	============================================= -->
+    
+    <section id="fun-facts">
+        <div class="container">
+            <h2>الشركاء</h2>
+            
+            <div class="row wow fadeInUp" data-wow-delay=".3s">
+             <div class="col-lg-12">
+                    <div class="col-lg-3 col-md-4 col-xs-12">
+                    <a href="#"><img src="img/portfolio/3.jpg" class="edit-img3"></a>
+                </div>
+                <div class="col-lg-9 col-md-8 col-xs-12 partner-2">
+                <div class="col-lg-3  col-md-2 col-sm-3 col-xs-6 partners partners-top">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/1.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners partners-top">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/2.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners partners-top">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/3.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners partners-top">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/4.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/6.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/4.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/3.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-2 col-sm-3 col-xs-6 partners">
+                    <a href="#">
+                    <img class="edit-img2" src="img/portfolio/2.jpg">
+                    <p>الموضوع</p>
+                    </a>
+                </div>
+
+                </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <!-- Footer
+	============================================= -->
+    <footer>
+        <div class="container">
+            <div class="row">
+            <div class="col-sm-6 col-xs-12">
+                <div class="right-side">الموضوع الموضوع الموضوع الموضوع الموضوع </br> الموضوع الموضوع الموضوع الموضوع الموضوع</div> 
+                </div>
+            <div class="col-sm-6 col-xs-12">
+                <div class="left-side">الموضوع الموضوع الموضوع الموضوع الموضوع </br> الموضوع الموضوع الموضوع الموضوع الموضوع</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <div class="switcher-wrapper hidden-sm hidden-xs">
+        
+        <div class="switcher-btn pull-left"><i class="fa fa-bars"></i></div></br>
+        <div class="switcher-btn pull-left"><i class="fa fa-facebook"></i></div></br>
+        <div class="switcher-btn pull-left"><i class="fa fa-twitter"></i></div></br>
+        <div class="switcher-btn pull-left"><i class="fa fa-youtube"></i></div></br>
+<!--        <div class="switcher-btn pull-left"><i class="fa fa-google"></i></div></br>-->
+        <div class="switcher-btn pull-left"><i class="fa fa-google-plus"></i></div></br>
+        <div class="switcher-btn pull-left"><i class="fa fa-linkedin"></i></div></br>
+<!--        <div class="switcher-btn pull-left"><i class="fa fa-yahoo"></i></div></br>-->
+        
+        </div>
+        
+        
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-assets/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- JS PLUGINS -->
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="plugins/countTo/jquery.countTo.js"></script>
+    <script src="plugins/inview/jquery.inview.min.js"></script>
+    <script src="plugins/Lightbox/dist/js/lightbox.min.js"></script>
+    <script src="plugins/WOW/dist/wow.min.js"></script>
+    <script>
+        
+     $(window).scroll(function () {
+    if ($(window).scrollTop() > 200) {
+          $(".switcher-wrapper").show();
+    }
+    if ($(window).scrollTop() < 200) {
+          $(".switcher-wrapper").hide();
+    }
+    });
+    </script>
+</body>
+
+</html>

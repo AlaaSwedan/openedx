@@ -1,0 +1,5 @@
+API_HOST_URL: 'http://egymoocs.nelc.edu.eg/' # localhost is 10.0.2.2 in Android
+ENVIRONMENT_DISPLAY_NAME: 'egymooc'
+PLATFORM_NAME: 'EGYMOOC'
+PLATFORM_DESTINATION_NAME: 'example.com'
+FEEDBACK_EMAIL_ADDRESS: 'openedx.deltasoft@gmail.com'

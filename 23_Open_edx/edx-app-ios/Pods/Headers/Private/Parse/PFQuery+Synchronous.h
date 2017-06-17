@@ -1,0 +1,5 @@
+XSym
+0042
+656d81a394689451a39edbc0f120ebe0
+../../../Parse/Parse/PFQuery+Synchronous.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     

@@ -1,0 +1,116 @@
+## mako
+<%page expression_filter="h"/>
+<%!
+  from django.core.urlresolvers import reverse
+  from django.utils.translation import ugettext as _
+  from branding.api import get_footer
+%>
+<% footer = get_footer(is_secure=is_secure) %>
+<%namespace name='static' file='static_content.html'/>
+
+ <div class="footer section-space80">
+        <!-- footer -->
+        <div class="test-container">
+            <div class="row">
+                <div class="col-md-12 col-sm-4 col-xs-12">
+                    <div class="footer-logo col-md-6"  style="width: 250px;">
+                        <!-- Footer Logo -->
+                        <img src="${static.url('images/ft-logo.png')}" alt="Borrow - Loan Company Website Templates"> 
+                    </div>
+
+                    % if not hide_openedx_link:
+                      <div class="footer-logo col-md-6 pull-right" style="width: 250px;" >
+                        <p>
+                          <a href="${footer['openedx_link']['url']}">
+                            <img src="${footer['openedx_link']['image']}" alt="${footer['openedx_link']['title']}" style="height: 46px;margin-left: 99px;" />
+                          </a>
+                        </p>
+                      </div>
+                    % endif
+                    <!-- /.Footer Logo -->
+                </div>
+            <hr class="dark-line">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="widget-text mt40">
+                        <!-- widget text -->
+                        <p class="copyright">${footer['copyright']}</p>
+
+                        <!-- <div class="row">
+                            <div class="col-md-6 col-xs-6">
+                                <p class="address-text"><span><i class="icon-placeholder-3 icon-1x"></i> </span>3895 Sycamore Road Arlington, 97812 </p>
+                            </div>
+                            <div class="col-md-6 col-xs-6">
+                                <p class="call-text"><span><i class="icon-phone-call icon-1x"></i></span>800-123-456</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <!-- /.widget text -->
+                </div>
+                <div class="col-md-2 col-sm-4 col-xs-6 col-md-offset-2">
+                    <div class="widget-footer mt40">
+                        <!-- widget footer -->
+                        <ul class="listnone">
+                          <div class="colophon">
+                          <nav class="nav-colophon" aria-label="${_('About')}">
+                            <ol>
+                                % for item_num, link in enumerate(footer['navigation_links'], start=1):
+                                <li class="nav-colophon-0${item_num}">
+                                  <a id="${link['name']}" href="${link['url']}">${link['title']}</a>
+                                </li>
+                                % endfor
+                            </ol>
+                          </nav>
+
+                        </div>
+                        </ul>
+                    </div>
+                    <!-- /.widget footer -->
+                </div>
+               
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <div class="widget-social mt40">
+                        <!-- widget footer -->
+                        <ul class="listnone">
+                            <li><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i>Google Plus</a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i>Linked In</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.widget footer -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.footer -->
+    <div class="tiny-footer">
+        <!-- tiny footer -->
+        <div class="test-container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <p> </p>
+                </div>
+                <div class="col-md-6 col-sm-6 text-right col-xs-6 ">
+                <p>
+                          % for item_num, link in enumerate(footer['legal_links'], start=1):
+                             | <a href="${link['url']}">${link['title']}</a> 
+                             
+                          % endfor
+                </p>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.tiny footer -->
+    <!-- back to top icon --> 
+   <!--  <a href="#0" class="cd-top" title="Go to top">Top</a> -->
+    <div class="switcher-wrapper hidden-sm hidden-xs">  
+        <div class="switcher-btn face "><i class="fa fa-facebook"></i></div>
+        <div class="switcher-btn twitter"><i class="fa fa-twitter"></i></div>
+        <div class="switcher-btn you "><i class="fa fa-youtube"></i></div>
+        <div class="switcher-btn google"><i class="fa fa-google-plus"></i></div>
+        <div class="switcher-btn linked"><i class="fa fa-linkedin"></i></div>
+        <div class="switcher-btn up "><i class="fa fa-chevron-up"></i></div>
+    </div>
+

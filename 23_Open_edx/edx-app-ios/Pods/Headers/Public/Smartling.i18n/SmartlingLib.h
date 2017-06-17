@@ -1,0 +1,5 @@
+XSym
+0053
+e97ba94a14c12032c6c977d111c2e7de
+../../../Smartling.i18n/Smartling.i18n/SmartlingLib.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          

@@ -1,0 +1,24 @@
+Admin pannel (django admin pannel part of mysql database):
+
+http://egymoocs.nelc.edu.eg/admin/login/?next=/admin/ 
+
+user:admin
+pass:admin
+---------------------------------------------------------------------
+Test email:
+email:openedx.deltasoft@gmail.com
+pass:edx123456
+
+---------------------------------------------------------------------
+Test staff user:
+
+email:staff@example.com
+pass:edx
+
+---------------------------------------------------------------------
+studio url (cms):
+
+http://egymoocs.nelc.edu.eg:18010/
+
+--------------------------------------------------------------------
+

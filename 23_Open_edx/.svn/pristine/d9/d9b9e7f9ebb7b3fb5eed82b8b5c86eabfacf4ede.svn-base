@@ -1,0 +1,31 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.js_utils import dump_js_escaped_json
+%>
+
+<%page expression_filter="h"/>
+<%namespace name='static' file='static_content.html'/>
+
+  % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
+    <section id="portfolio">
+      <div class="container">
+        <div class="services-box">
+          <div class="row wow fadeInUp" data-wow-delay=".3s">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+              <div class="date_div">
+                <p class="most_view"> ${_("The most viewed courses")}</p></br></br>
+                <p>${_("Here are the most viewed courses which many students have been enrolled in.")} </p>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+              %for course in courses[:settings.HOMEPAGE_COURSE_MAX]:
+                <%include file="most_views.html" args="course=course" />
+              %endfor
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  %endif

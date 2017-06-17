@@ -1,0 +1,5 @@
+XSym
+0041
+78b36701bdcc608c45311511c97c47fe
+../../../Parse/Parse/PFQuery+Deprecated.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

@@ -1,0 +1,5 @@
+XSym
+0061
+d9d1481bb7c4147527e15b1c9a5bc096
+../../../FBSnapshotTestCase/FBSnapshotTestCase/UIImage+Diff.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  

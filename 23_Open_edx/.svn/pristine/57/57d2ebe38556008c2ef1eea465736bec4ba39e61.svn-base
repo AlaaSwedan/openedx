@@ -1,0 +1,5 @@
+XSym
+0126
+0d1597127b2c0a545a5eeb6a988bb9f5
+../../../../NewRelicAgent/NewRelic_iOS_Agent_4.186.1/NewRelicAgent.framework/Versions/A/Headers/NRURLSessionTaskDelegateBase.h
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 

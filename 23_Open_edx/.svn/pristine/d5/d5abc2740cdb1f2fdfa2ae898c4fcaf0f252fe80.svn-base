@@ -1,0 +1,248 @@
+<%page expression_filter="h"/>
+<%inherit file="main.html" />
+<%namespace name='static' file='static_content.html'/>
+<%!
+from django.utils.translation import ugettext as _
+from django.core.urlresolvers import reverse
+
+from openedx.core.djangolib.markup import HTML, Text
+%>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="home">
+      <header id="header-slider">
+     <div class="slider slider-rtl" id="slider">
+
+      <div class="slider-img">
+        <img src="${static.url('images/slider-1.jpg')}" alt="slider_img" class="">
+        <div class="test-container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-captions">
+                <!-- slider-captions -->
+                <h1 class="slider-title"> ${_("Best Courses, Top Institutions, Learn anytime anywhere")} </h1>
+                <p class="slider-text hidden-xs">${_("Join the Arab world best online classrooms")}
+                  <br>
+                  <strong class="text-highlight"></strong></p>
+                <a href="${marketing_link('COURSES')}"  id="a-slider" class="btn btn-default hidden-xs"> ${_("Join a free course")} </a>
+              </div>
+              <!-- /.slider-captions -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="slider-img">
+        <img src="${static.url('images/slider-1.jpg')}" alt="slider_img" class="">
+        <div class="test-container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+              <div class="slider-captions">
+                <!-- slider-captions -->
+                <h1 class="slider-title">${_("Best Courses, Top Institutions, Learn anytime anywhere")} </h1>
+                <p class="slider-text hidden-xs"> ${_("Join the Arab world best online classrooms")}
+                  <br>
+                  <strong class="text-highlight"></strong></p>
+                <a href="${marketing_link('COURSES')}"  id="a-slider" class="btn btn-default hidden-xs"> ${_("Join a free course")} </a>
+              </div>
+              <!-- /.slider-captions -->
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div>
+        <div class="slider-img">
+        <img src="${static.url('images/slider-1.jpg')}" alt="slider_img" class="">
+        <div class="test-container">
+          <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
+              <div class="slider-captions">
+                <!-- slider-captions -->
+                <h1 class="slider-title">${_("Best Courses, Top Institutions, Learn anytime anywhere")} </h1>
+                <p class="slider-text hidden-xs"> ${_("Join the Arab world best online classrooms")}
+                  <br>
+                  <strong class="text-highlight"></strong></p>
+                <a href="${marketing_link('COURSES')}"  id="a-slider" class="btn btn-default hidden-xs"> ${_("Join a free course")} </a>
+              </div>
+              <!-- /.slider-captions -->
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </div>
+
+      </header>
+
+    </section>
+</main>
+
+% if show_homepage_promo_video:
+  <section id="video-modal" class="modal home-page-video-modal video-modal">
+    <div class="inner-wrapper" id="for_video" style="padding:0px;">
+      <iframe title="YouTube Video" width="640" height="360" src="//www.youtube.com/embed/${homepage_promo_video_youtube_id}?showinfo=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </section>
+% endif
+
+ 
+   <div class="rate-table">
+  
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="mb60 text-center section-title">
+                        <!-- section title start-->
+                        <h1> ${_("CATEGORIES")} </h1>
+                    </div>
+                    <!-- /.section title start-->
+                </div>
+                <div class="text-center product">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/info_technology_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/lecture.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate">  ${_("Information Technology")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/medical_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/desktop.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate"> ${_("Medical")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/programming_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/studying.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate"> ${_("Programming")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/subjects">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/graduate.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate"> ${_("All")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+         
+               
+                </div>
+            </div>
+        </div>
+    </div>
+
+    ##_____________________________________________
+
+
+            <%include file="${courses_list}" />
+               
+
+ <div class="clints-block section-space40 bg-white">
+        <div id="owl-clients" class="owl-no-pagination ">
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-1.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-2.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-3.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-4.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-5.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-1.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                   <img src="${static.url('images/logo-2.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                   <img src="${static.url('images/logo-3.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                   <img src="${static.url('images/logo-4.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-5.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-1.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+            <div class="item">
+                <div class="clints-box">
+                    <img src="${static.url('images/logo-2.jpg')}" alt="clints" class="img-responsive" >
+                </div>
+            </div>
+        </div> 
+    </div>
+    
+   
+<%block name="js_extra">
+   <script type="text/javascript">
+      $(window).load(function() {
+         if(getParameterByName('next')) {
+              $('#login').trigger("click");
+         }
+      })
+   </script>
+</%block>
+
+% if show_signup_immediately is not UNDEFINED:
+  ## NOTE: This won't work in production, because anonymous views are cached, so it will
+  ## show either with or without this extra js for 3 minutes at a time.
+<script type="text/javascript">
+  $(window).load(function() {$('#signup_action').trigger("click");});
+</script>
+% endif

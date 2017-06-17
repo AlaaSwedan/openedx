@@ -1,0 +1,6 @@
+LOCALIZATION:
+  {
+    'ENABLED': true,
+    'DEFAULT_LOCALE':'ar'
+    
+  }

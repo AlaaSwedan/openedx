@@ -1,0 +1,18 @@
+>> sudo -H -u edxapp bash
+>> source /edx/app/edxapp/edxapp_env
+>> cd /edx/app/edxapp/edx-platform
+>> ./manage.py lms --settings aws shell => enter python shell 
+
+
+>>> from django.core.mail import send_mail
+>>> send_mail('test email', 'hello world', 'your@email.com', ['fatma.deltasoft@gmail.com'])
+ 
+  	sucess result : 1
+	error result : error in create_connection for res in getaddrinfo(host, port, 0, SOCK_STREAM):gaierror: [Errno -2] Name or service not known.
+
+	
+----------------------------------------------------------------------------
+Guide link:
+http://blog.mailgun.com/25-465-587-what-port-should-i-use/
+----------------------------------------------------------------------------
+telnet smtp.gmail.com 587 

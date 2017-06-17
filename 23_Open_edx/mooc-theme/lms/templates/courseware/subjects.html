@@ -1,0 +1,88 @@
+<%!
+  import json
+  from django.utils.translation import ugettext as _
+  from openedx.core.djangolib.js_utils import dump_js_escaped_json
+%>
+<%inherit file="../main.html" />
+<%
+  course_discovery_enabled = settings.FEATURES.get('ENABLE_COURSE_DISCOVERY')
+%>
+
+<%namespace name='static' file='../static_content.html'/>
+
+% if course_discovery_enabled:
+<%block name="header_extras">
+  % for template_name in ["course_card", "filter_bar", "filter", "facet", "facet_option"]:
+  <script type="text/template" id="${template_name}-tpl">
+      <%static:include path="discovery/${template_name}.underscore" />
+  </script>
+  % endfor
+  
+</%block>
+% endif
+
+<%block name="pagetitle">${_("subjects")}</%block>
+
+<main id="main" aria-label="Content" tabindex="-1">
+    <section class="find-courses" >
+      <section class="subjects-container">
+         <div class="rate-table ">
+        <div class="container">
+            <div class="row">
+                <div class=" col-md-12 col-sm-12 col-xs-12 text-center">
+                    <div class="mb60 text-center section-title">
+                        <!-- section title start-->
+                        <h1> ${_("CATEGORIES")} </h1>
+                          <h3> ${_("Explore new interests and career opportunities with courses in information technology, medical, programming, and more ..")}</h3>
+                    </div>
+
+                    <!-- for listing all subjects ${subjects} -->
+                    <!-- /.section title start-->
+                </div>
+                <div class="text-center product">
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/info_technology_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/lecture.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate">  ${_("Information Technology")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                  <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/medical_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/desktop.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate"> ${_("Medical")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-6">
+                  <a href="/programming_subject">
+                    <div class="rate-counter-block">
+                        <div class="icon rate-icon  ">
+                            <img src="${static.url('images/studying.svg')}" alt="Borrow - Loan Company Website Template" class="icon-svg-2x">
+                        </div>
+                        <div class="rate-box">
+                          <h1 class="loan-rate"> ${_("Programming")}</h1>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+      </section>
+    </section>
+</main>
